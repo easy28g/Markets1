@@ -44,8 +44,8 @@
     </div>
 
     <div class="lenta" >
-        <a>
-            <h2 class="listMarkets" th:each="market : ${markets}" th:text="${market.marketName}"></h2>
+        <a  th:each="market : ${markets}" th:href="${market.marketUrl}">
+            <h2 class="listMarkets" th:text="${market.marketName}"></h2>
         </a>
     </div>
 
