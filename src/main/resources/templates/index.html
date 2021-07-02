@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+    <style>
+        .header{
+            border: 3px solid black;
+            height: 80px;
+            width: 1000px;
+            border-radius: 15px;
+            margin: auto;
+        }
+
+        .myButton{
+            margin-left: 240px;
+            margin-top: 30px;
+            font-size: 30px;
+        }
+
+        .lenta{
+            border: 1px solid black;
+            height: 800px;
+            width: 700px;
+            border-radius: 15px;
+            margin-top: 100px;
+            margin-left: 320px;
+        }
+
+        .listMarkets{
+            padding-left: 40%;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div>
+            <button class="myButton">AsiaMall</button>
+            <button style="font-size: 30px">Bishkek Park</button>
+            <button style="font-size: 30px">ЦУМ</button>
+            <button style="font-size: 30px">Vefa</button>
+        </div>
+    </div>
+
+    <div class="lenta" >
+        <a>
+            <h2 class="listMarkets" th:each="market : ${markets}" th:text="${market.marketName}"></h2>
+        </a>
+    </div>
+
+</body>
+</html>
