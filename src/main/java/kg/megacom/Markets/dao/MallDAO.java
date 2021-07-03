@@ -25,6 +25,7 @@ public class MallDAO {
         asiaMallMarketArrayList.add(new Market(++marketId, "1stAMshoes", "/vdssd"));
         asiaMallMarketArrayList.add(new Market(++marketId, "2stAMclocks", "/gfdaggdf"));
         asiaMallMarketArrayList.add(new Market(++marketId, "3stAMjackets", "/ertutbf"));
+        Collections.shuffle(asiaMallMarketArrayList);
 
         bpMarketArrayList = new ArrayList<>();
         bpMarketArrayList.add(new Market(++marketId, "1stBPshoes", "/adfherg"));
@@ -47,6 +48,10 @@ public class MallDAO {
 
     public List<Market> index(){
         return allMarkets;
+    }
+
+    public List<Market> returnAsiaMallMarket(){
+        return asiaMallMarketArrayList;
     }
 
 }

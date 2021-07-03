@@ -23,6 +23,11 @@ public class MallControllers {
         return "index";
     }
 
+    @GetMapping("/getAsiaMall")
+    private String asiaMall(Model model){
+        model.addAttribute("asiaMallMarkets", mallDAO.returnAsiaMallMarket());
+        return "asia-mall";
+    }
 
 
 }
